@@ -1,1 +1,3 @@
 # TexasHack-Spring-2023
+
+We are creating a positive application that encourages people to take care of human sustaninablity - physical and mental. This is the website design to introduce the app. It will get people moving through dance challenges and help people learn more about sustainablity through an information pop-up with a fun challenge. The app is also all about positivity - negative words are blocked. 
