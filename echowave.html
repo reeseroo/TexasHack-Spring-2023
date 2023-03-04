@@ -23,23 +23,7 @@ body, html {
   background-size: cover;
 }
 
-/* First image (Logo. Full height) */
-.bgimg-1 {
-  background-image: url('/w3images/parallax1.jpg');
-  min-height: 100%;
-}
 
-/* Third image (Contact) */
-.bgimg-3 {
-  background-image: url("/w3images/parallax3.jpg");
-  min-height: 400px;
-}
-
-/* Second image (Portfolio) */
-.bgimg-2 {
-  background-image: url("/w3images/parallax2.jpg");
-  min-height: 400px;
-}
 
 .w3-wide {letter-spacing: 10px;}
 .w3-hover-opacity {cursor: pointer;}
@@ -55,19 +39,18 @@ body, html {
 </head>
 <body>
 
-<!-- Navbar (sit on top) -->
-<div class="w3-top">
-  <div class="w3-bar" id="myNavbar">
-    <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
-      <i class="fa fa-bars"></i>
-    </a>
-    <a href="#home" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> Home</a>
-    <a href="#about" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> ABOUT</a>
-    <a href="#contact" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> Report Bug</a>
-    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
-      <i class="fa fa-search"></i>
-    </a>
+
+  <div class="w3-top">
+    <div class="w3-bar" id="myNavbar">
+      <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+        <i class="fa fa-bars"></i>
+      </a>
+      <a href="#home" class="w3-bar-item w3-button w3-hide-small"><img src="https://raw.githubusercontent.com/reeseroo/TexasHack-Spring-2023/main/echowave_icon.png" alt="logo" style="width:30px;height:30px;margin-right:10px;"></i> Home</a>
+      <a href="#about" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> ABOUT</a>
+      <a href="#contact" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> Report Bug</a>
+    </div>
   </div>
+  
 
   <!-- Navbar on small screens -->
   <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
@@ -81,68 +64,243 @@ body, html {
 <!-- First Parallax Image with Logo Text -->
 <div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
     <div class="w3-display-middle" style="white-space:nowrap;">
-      <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">MY <span class="w3-hide-small">WEBSITE</span> LOGO</span>
+      <img src="https://raw.githubusercontent.com/reeseroo/TexasHack-Spring-2023/main/EcoWave_transparent.png" alt="logo">
     </div>
+    
   </div>
-  <div class="w3-content w3-container w3-padding-64" id="portfolio">
-    <h3 class="w3-center">MY WORK</h3>
-<p>
+  <div class="w3-content w3-container w3-padding-64" id="our app">
+    <h3 class="w3-center"></h3>
+    <style>
+      p {
+        font-size: 14px;
+      }
+    </style>
+  <p>
+    EchoWave is a social media platform that generates a positive and “green” environment targeting sustainability
+     in mental and physical health. Our goal is to educate teenagers (ages 13 and up) to learn about sustainable facts, 
+     do dancing challenges, and have fun!
+    
 
 
-</p>
+  </p>
+  <div class="w3-content w3-container w3-padding-64" id="our app">
+    <h3 class="w3-center">OUR APP</h3>
+    <ul>
+      <li>Challenge yourself to improve your physical health through daily dance challenges. Each day, EchoWave presents a new routine to keep you moving and motivated.</li>
+      <li>Did you know that small changes in your daily routine can have a big impact on our planet? Learn a new sustainability fact every day with EchoWave's "Do you know" feature, and take on fun challenges to make a difference.</li>
+      <li>At EchoWave, we believe in creating a positive social environment that supports mental wellness. That's why we've included a filter to keep negative language out of our platform, so you can focus on connecting with others in a clean and green space.</li>
+    </ul>
+    <br>
+<html>
+<head>
+	<title>Photo Gallery</title>
+	<style>
+		.gallery {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-items: center;
+			gap: 10px;
+			margin: 20px auto;
+			max-width: 800px;
+		}
+		.gallery img {
+			width: 30%;
+			height: auto;
+			object-fit: cover;
+			cursor: pointer;
+			transition: all 0.3s ease-in-out;
+		}
+		.gallery img:hover {
+			transform: scale(1.05);
+		}
+		.modal {
+			display: none;
+			position: fixed;
+			z-index: 1;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			overflow: auto;
+			background-color: rgba(0, 0, 0, 0.9);
+		}
+		.modal-content {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			margin: auto;
+			max-width: 800px;
+			max-height: 90%;
+			padding: 20px;
+			box-sizing: border-box;
+			overflow-y: auto;
+			background-color: #fff;
+			border-radius: 12px;
+		}
+		.modal img {
+			max-width: 100%;
+			max-height: 100%;
+			object-fit: contain;
+		}
+		.close {
+			position: absolute;
+			top: 20px;
+			right: 30px;
+			font-size: 30px;
+			font-weight: bold;
+			color: #fff;
+			cursor: pointer;
+		}
+		@media screen and (max-width: 800px) {
+			.gallery img {
+				width: 45%;
+			}
+		}
+		@media screen and (max-width: 500px) {
+			.gallery img {
+				width: 80%;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="gallery">
+		<img src="https://raw.githubusercontent.com/reeseroo/TexasHack-Spring-2023/main/PAGE1.png" alt="Photo 1" onclick="openModal(this)">
+		<img src="https://raw.githubusercontent.com/reeseroo/TexasHack-Spring-2023/main/PAGE2.png" alt="Photo 2" onclick="openModal(this)">
+		<img src="https://raw.githubusercontent.com/reeseroo/TexasHack-Spring-2023/main/PAGE3.png" alt="Photo 3" onclick="openModal(this)">
+	</div>
+	<div class="modal" onclick="closeModal()">
+		<span class="close">&times;</span>
+		<div class="modal-content">
+			<img id="modal-img">
+		</div>
+	</div>
+	<script>
+		function openModal(img) {
+			document.getElementById("modal-img").src = img.src;
+			document.querySelector(".modal").style.display = "block";
+		}
+		function closeModal() {
+			document.querySelector(".modal").style.display = "none";
+		}
+	</script>
+</body>
+</html>
+
+ 
+      <!-- i know that this looks stupid but keep it for spacing-->
+    </p>
+    <div class="w3-row">
+      <div class="w3-col m6 w3-center w3-padding-large">
+        
+      </div>
+  
+      <!-- Hide this text on small devices -->
+      <div class="w3-col m6 w3-hide-small w3-padding-large">
+        
+      </div>
+      <div class="w3-row">
+        <div class="w3-col m6 w3-center w3-padding-large">
+          
+        </div>
+    
+        <!-- Hide this text on small devices -->
+        <div class="w3-col m6 w3-hide-small w3-padding-large">
+          <p>
+    
+          </p>
+        </div>
+        <div class="w3-row">
+          <div class="w3-col m6 w3-center w3-padding-large">
+            
+          </div>
+      
+          <!-- Hide this text on small devices -->
+          <div class="w3-col m6 w3-hide-small w3-padding-large">
+            <p>
+      
+            </p>
+          </div>
+          <div class="w3-row">
+            <div class="w3-col m6 w3-center w3-padding-large">
+              
+             
+            </div>
+        
+            <!-- Hide this text on small devices -->
+            <div class="w3-col m6 w3-hide-small w3-padding-large">
+              <p>
+        
+              </p>
+    </div>
 
   <!-- Second Parallax Image with Portfolio Text -->
 <div class="bgimg-2 w3-display-container w3-opacity-min">
   <div class="w3-display-middle">
-    <p>place text here</p>
-    <video width="500px" height="500px" controls="controls">
-      <source src="vid.mp4" type="video/mp4"> <!-- need to change the source -->
+    <p>Example of A fun challenge</p>
+    <video width="640" height="360" controls>
+      <source src="https://github.com/reeseroo/TexasHack-Spring-2023/raw/main/demo.mp4" type="video/mp4">
+      Your browser does not support the video tag.
     </video>
+    
   </div>
 </div>
 
+<div class="w3-content w3-container w3-padding-64" id="">
+  <h3 class="w3-center"></h3>
+  <p>
+    
+    
+
+    <!-- i know that this looks stupid but keep it for spacing-->
+  </p>
+  <div class="w3-row">
+    <div class="w3-col m6 w3-center w3-padding-large">
+      
+    </div>
+
+    <!-- Hide this text on small devices -->
+    <div class="w3-col m6 w3-hide-small w3-padding-large">
+      
+    </div>
+    <div class="w3-row">
+      <div class="w3-col m6 w3-center w3-padding-large">
+        
+      </div>
+  
+      <!-- Hide this text on small devices -->
+      <div class="w3-col m6 w3-hide-small w3-padding-large">
+        <p>
+  
+        </p>
+      </div>
+      <div class="w3-row">
+        <div class="w3-col m6 w3-center w3-padding-large">
+          
+        </div>
+    
+        <!-- Hide this text on small devices -->
+        <div class="w3-col m6 w3-hide-small w3-padding-large">
+          <p>
+    
+          </p>
+        </div>
+        <div class="w3-row">
+          <div class="w3-col m6 w3-center w3-padding-large">
+            
+           
+          </div>
+      
+          <!-- Hide this text on small devices -->
+          <div class="w3-col m6 w3-hide-small w3-padding-large">
+            <p>
+      
+            </p>
+  </div>
   
   <!-- Container (Portfolio Section) -->
-  
-  
-    <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) 
-    <div class="w3-row-padding w3-center">
-      <div class="w3-col m3">
-        <img src="/w3images/p1.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="The mist over the mountains">
-      </div>
-  
-      <div class="w3-col m3">
-        <img src="/w3images/p2.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Coffee beans">
-      </div>
-  
-      <div class="w3-col m3">
-        <img src="/w3images/p3.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Bear closeup">
-      </div>
-  
-      <div class="w3-col m3">
-        <img src="/w3images/p4.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Quiet ocean">
-      </div>
-    </div>
-  
-    <div class="w3-row-padding w3-center w3-section">
-      <div class="w3-col m3">
-        <img src="/w3images/p5.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="The mist">
-      </div>
-  
-      <div class="w3-col m3">
-        <img src="/w3images/p6.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="My beloved typewriter">
-      </div>
-  
-      <div class="w3-col m3">
-        <img src="/w3images/p7.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Empty ghost train">
-      </>
-  
-      <div class="w3-col m3">
-        <img src="/w3images/p8.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Sailing">
-      </div> 
-      <button class="w3-button w3-padding-large w3-light-grey" style="margin-top:64px">Click Me!</button>
-      <button class="w3-button w3-padding-large w3-light-grey" style="margin-top:64px">LOAD MORE</button> -->
-      <!-- Add icon library -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <!-- Full width -->
@@ -185,40 +343,28 @@ body, html {
     </style>
   </head>
   <body>
-    <a href="https://www.youtube.com/watch?v=Vr4IYjeplJAh?v=dQw4w9WgXcQ" class="download-button">DOWNLOAD NOW!!!</a>
+    <a href="https://www.youtube.com/watch?v=LtHr7gluh08" class="download-button">DOWNLOAD NOW!!!</a>
   </body>
 </html>
 
-l>
+
 
     </div>
   </div>
-  
-  <!-- Modal for full size images on click
-  <div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
-    <span class="w3-button w3-large w3-black w3-display-topright" title="Close Modal Image"><i class="fa fa-remove"></i></span>
-    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
-      <img id="img01" class="w3-image">
-      <p id="caption" class="w3-opacity w3-large"></p>
-    </div>
-  </div>
--->
-
 
 <!-- Container (About Section) -->
 <div class="w3-content w3-container w3-padding-64" id="about">
-  <h3 class="w3-center">ABOUT</h3>
+  <h3 class="w3-center">ABOUT US</h3>
   <p>
-    EchoWave is a social media platform that generates a positive and “green” environment targeting sustainability
-     in mental and physical health. Our goal is to educate teenagers(ages 13 and up) to learn about sustainable facts, 
-     do dancing challenges, and have fun!
-    <img src="/w3images/avatar_hat.jpg" class="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="Photo with app" width="500" height="333">
+    
+    
 
   </p>
+  <head>
   <div class="w3-row">
     <div class="w3-col m6 w3-center w3-padding-large">
       <p><b><i class="fa fa-user w3-margin-right"></i>Thu</b></p><br>
-      <img src="/w3images/avatar_hat.jpg" class="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="Photo of Me" width="500" height="333">
+      
     </div>
 
     <!-- Hide this text on small devices -->
@@ -230,55 +376,59 @@ l>
     <div class="w3-row">
       <div class="w3-col m6 w3-center w3-padding-large">
         <p><b><i class="fa fa-user w3-margin-right"></i>Jenna</b></p><br>
-        <img src="/w3images/avatar_hat.jpg" class="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="Photo of Me" width="500" height="333">
+       
       </div>
   
       <!-- Hide this text on small devices -->
       <div class="w3-col m6 w3-hide-small w3-padding-large">
-        <p>The one who
+        <p>The one who never sleeps and is a Discord mod.
   
         </p>
       </div>
       <div class="w3-row">
         <div class="w3-col m6 w3-center w3-padding-large">
           <p><b><i class="fa fa-user w3-margin-right"></i>Reese</b></p><br>
-          <img src="/w3images/avatar_hat.jpg" class="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="Photo of Me" width="500" height="333">
+          
         </div>
     
         <!-- Hide this text on small devices -->
         <div class="w3-col m6 w3-hide-small w3-padding-large">
-          <p>The one who
+          <p>The one who uses chatGPT for everything.
     
           </p>
         </div>
         <div class="w3-row">
           <div class="w3-col m6 w3-center w3-padding-large">
             <p><b><i class="fa fa-user w3-margin-right"></i>Abby</b></p><br>
-            <img src="/w3images/avatar_hat.jpg" class="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="Photo of Me" width="500" height="333">
+            
           </div>
       
           <!-- Hide this text on small devices -->
           <div class="w3-col m6 w3-hide-small w3-padding-large">
-            <p>The one who 
+            <p>The one who acts like she is put together.
       
             </p>
+            
+
   </div>
           </div>
+          <div style="text-align:center;">
+            <img src="https://raw.githubusercontent.com/reeseroo/TexasHack-Spring-2023/main/PXL_20230304_015644476.jpg" alt="the team" width="400">
+        </div>
+        
+
   <p class="w3-large w3-center w3-padding-16">Our Missions/Inspirations</p>
   <p>
-    We are now in the social media era, but how can we make it a friendly, “green”, and clean environment for teenagers? 
-    How can we use social media to inspire the young generation to generate a positive impact on the future world?
+    In today's world, social media has become an integral part of our lives. It has changed the way we communicate, interact, and share information. However, as social media continues to evolve, it is crucial that we also take steps to ensure it is a friendly, "green," and clean environment for teenagers.
+
+    The younger generation is the future, and social media can be a powerful tool in inspiring them to create a positive impact on the world. By using social media to share stories of environmental activism, sustainability, and other green initiatives, we can motivate and encourage young people to get involved and take action.
+
+    We must also consider the impact of social media on mental health and wellbeing. While social media has the potential to connect us with others and offer support, it can also be a source of anxiety, stress, and negative self-image. By promoting positive and healthy online interactions and encouraging self-care, we can create a safer and more nurturing environment for teenagers.
+
+    In short, social media is a double-edged sword, and it's up to us to make it a force for good. By prioritizing a green, clean, and friendly environment, we can inspire the young generation to become positive agents of change and create a better future for all.
  </p>
 </div>
 
-
-
-<!-- Third Parallax Image with Portfolio Text -->
-<div class="bgimg-3 w3-display-container w3-opacity-min">
-  <div class="w3-display-middle">
-     <span class="w3-xxlarge w3-text-white w3-wide">CONTACT</span>
-  </div>
-</div>
 
 <!-- Container (Contact Section) -->
 <div class="w3-content w3-container w3-padding-64" id="contact">
@@ -287,13 +437,13 @@ l>
 
   <div class="w3-row w3-padding-32 w3-section">
     <div class="w3-col m4 w3-container">
-      <img src="/w3images/map.jpg" class="w3-image w3-round" style="width:100%">
+      <img src="https://raw.githubusercontent.com/reeseroo/TexasHack-Spring-2023/main/CodeQueens.png" alt="Code Queens logo">
     </div>
     <div class="w3-col m8 w3-panel">
       <div class="w3-large w3-margin-bottom">
         <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Austin, TX, US<br>
         <i class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Phone: +00 151515<br>
-        <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Email: abby.vankeer@gmail.com<br>
+        <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Email: RATJ@codequeens.com<br>
       </div>
       <p>Get in contact with Code Queens:</p>
       <form action="/action_page.php" target="_blank">
@@ -314,17 +464,7 @@ l>
   </div>
 </div>
 
-<!-- Footer -->
-<footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
-  <html>
-  <head>
-    <title>Made by</title>
-  </head>
-  <body>
-    <img src="file:///C:/Users/reese/Downloads/CodeQueens.png" alt="Code Queens Logo">
-  </body>
-</html>
-</footer>
+
  
 <script>
 // Modal Image Gallery
